@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+	<head>
+		<title>Angular Js App</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="main-menu">
+					<ul>
+						<li><a ng-href="#home">Home</a></li>
+						<li><a ng-href="#about">About Us</a></li>					
+						<li><a ng-href="#examples">Examples</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content slide-animation" ng-view></div>
+		</div>
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+		<script src="app/controllers/homeController.js"></script>		
+		<script src="app/controllers/aboutController.js"></script>
+		<script src="app/controllers/examplesController.js"></script>
+	</body>
+</html>

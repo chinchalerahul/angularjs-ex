@@ -1,0 +1,27 @@
+body{
+	font-size:14px;
+	margin: 0 auto;
+    padding: 0;
+    font-family: arial;
+}
+.header{
+	background: #d6d6d6;
+	padding: 10px;
+}
+.main-menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.main-menu ul li{    
+	display: inline;
+    list-style: none outside none;
+    padding: 5px 10px;
+}
+.main-menu ul li a{
+	text-decoration: none; 
+	color: #000;
+}
+.content{
+    padding: 20px;
+}  
