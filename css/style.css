@@ -25,3 +25,6 @@ body{
 .content{
     padding: 20px;
 }
+.main-menu .active{
+	font-weight:bold;
+}
