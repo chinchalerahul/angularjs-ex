@@ -1,21 +1,29 @@
-var app = angular.module("myFirstApp",[]);
+var app = angular.module("myFirstApp",['ui.router']);
 
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider
-	.when('/home', {
-		controller:'homeController',
-		templateUrl:'app/templates/home.html'
+app.config(function($stateProvider, $urlRouterProvider) {
+	//The root state for this application
+	$urlRouterProvider.when('', '/home');
+
+	// For any unmatched url, redirect to /state1
+	$urlRouterProvider.otherwise("/pageNotFound");
+  
+	//set up the states
+    $stateProvider
+	.state('home', {
+		url: '/home',
+		templateUrl:'app/templates/home.html',
+		controller:'homeController'		
 	})
-	.when('/about', {
-		controller:'aboutController',
-		templateUrl:'app/templates/about.html'
+	.state('about', {
+		url: '/about',
+		templateUrl:'app/templates/about.html',
+		controller:'aboutController'		
 	})
-	.when('/examples', {
-		controller:'examplesController',
-		templateUrl:'app/templates/examples.html'
-	})
-	.otherwise({
-		redirectTo:'/home'
+	.state('contact', {
+		url:'/contact',		
+		templateUrl:'app/templates/contact.html',
+		controller:'contactController'
 	});
-}]);
+});
+ 
+
