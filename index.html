@@ -7,11 +7,11 @@
 	<body>
 		<div class="wrapper">
 			<div class="header">
-				<div class="main-menu">
+				<div class="main-menu" ng-controller="activeMenuController">
 					<ul>
-						<li><a ui-sref="home">Home</a></li>
-						<li><a ui-sref="about">About Us</a></li>					
-						<li><a ui-sref="contact">Contact Us</a></li>
+						<li ng-class="{active: isActive('home')}"><a ui-sref="home">Home</a></li>
+						<li ng-class="{active: isActive('about')}"><a ui-sref="about">About Us</a></li>					
+						<li ng-class="{active: isActive('contact')}"><a ui-sref="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -27,6 +27,7 @@
 		<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
 		<script type="text/javascript" src="lib/angular-animate.min.js"></script>
 		<script type="text/javascript" src="app/app.js"></script>
+		<script src="app/controllers/activeMenuController.js"></script>
 		<script src="app/controllers/homeController.js"></script>		
 		<script src="app/controllers/aboutController.js"></script>
 		<script src="app/controllers/contactController.js"></script>
