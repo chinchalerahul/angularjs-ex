@@ -1,4 +1,4 @@
-var app = angular.module("myFirstApp",['ui.router']);
+var app = angular.module("myFirstApp",['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	//The root state for this application
@@ -23,7 +23,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		url:'/contact',		
 		templateUrl:'app/templates/contact.html',
 		controller:'contactController'
-	});
+	})
+	.state('login', {
+		url:'/login',		
+		templateUrl:'app/templates/login.html',
+		controller:'loginController'
+	});	
 });
  
 
