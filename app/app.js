@@ -28,6 +28,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		url:'/login',		
 		templateUrl:'app/templates/login.html',
 		controller:'loginController'
+	})
+	.state('pageNotFound', {
+		url:'/pageNotFound',		
+		templateUrl:'app/templates/pageNotFound.html',
 	});	
 });
  
