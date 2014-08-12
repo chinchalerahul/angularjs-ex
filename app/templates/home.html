@@ -1,10 +1,16 @@
 <div class="content-wrapper">
 	<h1>{{page.title}}</h1>
 	<p>{{page.body}}</p>
-	<div>
-		<input type="text" ng-model="typehere">
-		<p>{{typehere}}</p>
-	</div>
+	
+	<h2>Retriving data from Mangolab service</h2>
+	<p><input type="text" ng-model="userInfo.firstName" size="30"></p>	
+	<table>		
+		<thead><tr><th>First name</th><th>Last name</th><th>Age</th></tr></thead>
+		<tbody>
+			<tr ng-repeat="userInfo in userDetails | filter:userInfo"><td>{{userInfo.firstName}}</td><td>{{userInfo.lastName}}</td><td>{{userInfo.age}}</td></tr>
+		</tbody>
+	</table>	
+
 </div>
 <div class="content-bottom">
 	<div ng-include src="'app/templates/contentBottom.html'"></div>

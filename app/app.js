@@ -1,4 +1,4 @@
-var app = angular.module("myFirstApp",['ui.router', 'ngAnimate']);
+var app = angular.module("myFirstApp",['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	//The root state for this application
