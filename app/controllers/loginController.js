@@ -13,7 +13,7 @@ app.controller("loginController", function($scope){
 			alert(isValid);
 		}else{
 			//invalid
-			alert(isValid);
+			//alert(isValid);
 		}
 	};
 });

@@ -6,11 +6,12 @@
 	<form name="loginForm" ng-submit="loginSubmit(loginForm.$valid)" novalidate>
 		<div class="form-item">
 			<input type="text" name="username" placeholder="Username" ng-model="user.username" required>
-			<div ng-show="loginForm.username.$error.required">Username is required.</div>
+			<div ng-show="submitted && loginForm.username.$error.required">Username is required.</div>
 		</div>
 		<div class="form-item">
-			<input type="password" name="password" placeholder="Password" ng-model="user.password">
+			<input type="password" name="password" placeholder="Password" ng-model="user.password" required>
+			<div ng-show="submitted && loginForm.password.$error.required">Username is required.</div>
 		</div>
-		<div class="form-item"><input type="submit" value="Login"></div>
+		<div class="form-item"><input type="submit" value="Login" ng-click="submitted=true"></div>
 	</form>
 </div>
