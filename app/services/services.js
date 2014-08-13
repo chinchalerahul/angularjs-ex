@@ -5,4 +5,5 @@ app.service("userService", function($http){
 		var response = $http.get(url);
 		return response;
 	};
+
 });
