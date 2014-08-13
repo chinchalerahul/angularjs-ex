@@ -46,3 +46,5 @@ table td{
 .form-item{
 	margin:10px 0px;
 }
+.error .error-text{color:red;}
+.error input{border:1px solid red;}
